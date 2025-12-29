@@ -57,6 +57,7 @@ python app.py
 
 
 ## Customization
+ ~~~
 if __name__ == "__main__":
     VIDEO_PATH = "vid6.mp4"
     AUDIO_PATH = "1.mp3"  # Set to None if no audio is desired
@@ -64,3 +65,4 @@ if __name__ == "__main__":
     FONT_SIZE = 10         # Controls the size of the characters in the Pygame window
     
     # ... (function call)
+~~~
