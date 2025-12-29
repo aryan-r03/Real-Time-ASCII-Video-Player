@@ -5,7 +5,7 @@ import numpy as np
 
 def convert_frame_to_ascii(frame, width=100):
 
-    ascii_chars = " .:;+=*#@MW$"
+    ascii_chars = " .:;+=*#@MW$" # for medium grade detailing using ASCII
 
     height = int(frame.shape[0] * width / frame.shape[1] / 2)
     if height == 0:
@@ -121,8 +121,8 @@ def play_video_in_pygame(video_path, audio_path=None, char_width=100, font_size=
 
 
 if __name__ == "__main__":
-    VIDEO_PATH = "vid6.mp4"
-    AUDIO_PATH = "1.mp3"
+    VIDEO_PATH = "video.mp4" # insert video path
+    AUDIO_PATH = "audio.mp3" # insert audio path
     CHAR_WIDTH = 100
     FONT_SIZE = 10
 
