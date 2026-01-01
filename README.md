@@ -1,68 +1,125 @@
-# 📺 ASCIImator: Real-Time ASCII Video Player
+# 📺 ASCIImator — Real-Time ASCII Video Player
+
+**ASCIImator** is a Python-based multimedia application that converts video frames into **real-time ASCII art** and renders them inside a Pygame window, with optional **synchronized audio playback**.
+
+This project demonstrates practical skills in **computer vision**, **multimedia systems**, and **real-time rendering**, packaged as a clean, self-contained application.
+
+---
 
 ## 🚀 Overview
 
-**ASCIImator** is a unique Python-based multimedia project that converts video streams into an ASCII art representation, rendering them in real-time within a Pygame window. It includes robust functionality for synchronizing and playing a separate audio file alongside the visual output, offering a complete, retro multimedia experience.
+ASCIImator reads a video file frame-by-frame, converts each frame into grayscale, maps pixel intensities to ASCII characters, and displays the result live. Audio can be played alongside the video to create a complete retro-style viewing experience.
 
-This project showcases expertise in:
-* **Computer Vision (OpenCV):** Efficient frame processing, resizing, and grayscale conversion.
-* **Multimedia Programming (Pygame):** Window management, display rendering, and precise audio playback synchronization.
-* **Algorithm Design:** Implementing the custom pixel-to-ASCII conversion logic for visual accuracy.
+This project focuses on:
+- Real-time performance
+- Clear algorithmic design
+- Practical use of Python multimedia libraries
 
-## ✨ Key Features
+---
 
-* **Real-Time Conversion:** Converts video frames to an array of ASCII characters frame-by-frame.
-* **Audio Synchronization:** Supports loading and playing a separate audio file (e.g., `1.mp3`) alongside the video stream.
-* **Configurable Resolution:** The ASCII output width and font size are easily customizable to match various display needs.
-* **Grayscale Mapping:** Uses a custom character set (`.:;+=*#@MW$`) to map pixel intensity to ASCII characters.
+## ✨ Features
 
-## 🛠️ Tech Stack
+- 🎞 **Real-time video-to-ASCII conversion**
+- 🔊 **Optional audio synchronization**
+- 🖥 **Live rendering using Pygame**
+- ⚙️ **Configurable resolution and font size**
+- 🎨 Custom grayscale-to-ASCII character mapping
 
-| Category | Tools & Libraries | Purpose |
-| :--- | :--- | :--- |
-| **Language** | Python | Core logic and execution. |
-| **Video Processing** | `opencv-python` (CV2) | Capturing video, reading frames, resizing, and grayscale conversion. |
-| **Multimedia/Display** | `pygame` | Window creation, rendering ASCII text, and audio playback. |
-| **Numerical** | `numpy` | Efficient array manipulation for image processing. |
+---
+
+## 🛠 Tech Stack
+
+- **Language:** Python 3  
+- **Libraries:**
+  - `opencv-python` – video capture and frame processing  
+  - `pygame` – window rendering and audio playback  
+  - `numpy` – efficient numerical operations  
+
+---
 
 ## 📁 Project Structure
+```
+ASCIImator/
+│
+├── app.py # Main application logic
+├── vid6.mp4 # Sample video file (user-provided)
+├── 1.mp3 # Sample audio file (user-provided)
+├── requirements.txt # Python dependencies
+└── README.md # Project documentation
+```
 
-Assuming your main Python file is named `app.py`:
-ASCIImator/ ├── app.py # Main video processing and Pygame execution logic ├── vid6.mp4 # Example Video File (To be supplied by the user) ├── 1.mp3 # Example Audio File (To be supplied by the user) └── README.md # Project documentation (This file) └── requirements.txt # List of required Python dependencies
+---
 
-## ⚙️ Setup and Installation
+## ⚙️ Installation & Setup
 
-### 1. Clone the Repository
-
-~~~bash
-# Update the URL below with your actual repository link
-git clone [https://github.com/aryan-r03/ASCIImator.git](https://github.com/aryan-r03/ASCIImator.git) 
+### 1. Clone the repository
+```bash
+git clone https://github.com/aryan-r03/ASCIImator.git
 cd ASCIImator
-~~~
+```
+---
 
-## Create and Activate a Virtual Environment
-# Linux/macOS
+##(Optional) Create a virtual environment
+### Linux / macOS
+```
 python3 -m venv venv
 source venv/bin/activate
+```
 
-# Windows
+### Windows
 python -m venv venv
 venv\Scripts\activate
 
-## Install Dependencies
+---
+
+## Install dependencies
+```
 pip install -r requirements.txt
+```
 
-## Run the Application
+---
+
+## Running the Application
+```
 python app.py
-
+```
+---
 
 ## Customization
- ~~~
-if __name__ == "__main__":
-    VIDEO_PATH = "vid6.mp4"
-    AUDIO_PATH = "1.mp3"  # Set to None if no audio is desired
-    CHAR_WIDTH = 100       # Controls the ASCII art horizontal resolution
-    FONT_SIZE = 10         # Controls the size of the characters in the Pygame window
-    
-    # ... (function call)
-~~~
+###You can control output quality and behavior directly from the configuration section in app.py:
+```
+VIDEO_PATH = "vid6.mp4"
+AUDIO_PATH = "1.mp3"     # Set to None to disable audio
+CHAR_WIDTH = 100         # ASCII output width (higher = more detail)
+FONT_SIZE = 10           # Font size for rendering
+
+```
+---
+### 🧠 How It Works (High-Level)
+```
+Capture video frames using OpenCV
+Resize and convert frames to grayscale
+Map pixel intensity to ASCII characters
+Render ASCII text in a Pygame window
+Synchronize audio playback (if enabled)
+```
+### 🔮 Future Improvements
+```
+Frame-rate adaptive rendering
+Terminal-based (CLI) ASCII output
+Color ASCII mode
+Performance optimizations for large videos
+Unit tests and CI integration
+```
+### 📌 Learning Outcomes
+```
+Real-time video processing with OpenCV
+ASCII rendering algorithms
+Multimedia synchronization
+Structuring Python projects for GitHub
+```
+### 📜 License
+```
+Licensed under the MIT License.
+```
+Free to use, modify, and distribute.
