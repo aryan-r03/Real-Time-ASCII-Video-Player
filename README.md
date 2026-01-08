@@ -6,7 +6,6 @@
   <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
   <img src="https://img.shields.io/badge/OpenCV-Enabled-green?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV"/>
   <img src="https://img.shields.io/badge/Pygame-Powered-orange?style=for-the-badge&logo=python&logoColor=white" alt="Pygame"/>
-  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License"/>
 </p>
 
 <p align="center">
@@ -352,7 +351,7 @@ Free to use, modify, and distribute.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - OpenCV community for computer vision tools
 - Pygame development team
