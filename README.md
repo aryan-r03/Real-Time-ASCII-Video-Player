@@ -32,12 +32,12 @@ This project demonstrates practical skills in **computer vision**, **multimedia 
   <table>
     <tr>
       <td align="center" width="25%">
-        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991195.png" width="60" height="60" alt="Video"/>
+        <img src="https://img.icons8.com/fluency/100/time-machine.png" width="60" height="60" alt="Video"/>
         <br><b>Real-Time Conversion</b>
         <br><sub>Live video-to-ASCII rendering</sub>
       </td>
       <td align="center" width="25%">
-        <img src="https://cdn-icons-png.flaticon.com/512/727/727245.png" width="60" height="60" alt="Audio"/>
+        <img src="https://img.icons8.com/external-vectorslab-flat-vectorslab/53/external-Playback-file-formats-and-file-folder-vectorslab-flat-vectorslab.png" alt="external-Playback-file-formats-and-file-folder-vectorslab-flat-vectorslab" width="60" height="60" alt="Audio"/>
         <br><b>Audio Sync</b>
         <br><sub>Optional synchronized playback</sub>
       </td>
@@ -47,7 +47,7 @@ This project demonstrates practical skills in **computer vision**, **multimedia 
         <br><sub>Smooth window-based display</sub>
       </td>
       <td align="center" width="25%">
-        <img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" width="60" height="60" alt="Config"/>
+        <img src="https://img.icons8.com/pulsar-gradient/96/browser-customization.png" width="60" height="60" alt="Config"/>
         <br><b>Customizable</b>
         <br><sub>Resolution & font control</sub>
       </td>
@@ -197,27 +197,27 @@ FONT_SIZE = 10               # Font size for rendering
   <table>
     <tr>
       <td align="center" width="20%">
-        <img src="https://cdn-icons-png.flaticon.com/512/3214/3214763.png" width="60" height="60" alt="Step 1"/>
+        <img src="https://img.icons8.com/color/96/sending-video-frames.png" width="60" height="60" alt="Step 1"/>
         <br><b>Capture Frames</b>
         <br><sub>OpenCV video processing</sub>
       </td>
       <td align="center" width="20%">
-        <img src="https://cdn-icons-png.flaticon.com/512/2165/2165061.png" width="60" height="60" alt="Step 2"/>
+        <img src="https://img.icons8.com/doodle/100/resize.png" width="60" height="60" alt="Step 2"/>
         <br><b>Resize & Convert</b>
         <br><sub>Grayscale transformation</sub>
       </td>
       <td align="center" width="20%">
-        <img src="https://cdn-icons-png.flaticon.com/512/1087/1087927.png" width="60" height="60" alt="Step 3"/>
+        <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-mapping-design-flaticons-flat-flat-icons.png" width="60" height="60" alt="Step 3"/>
         <br><b>Pixel Mapping</b>
         <br><sub>Intensity to ASCII</sub>
       </td>
       <td align="center" width="20%">
-        <img src="https://cdn-icons-png.flaticon.com/512/3524/3524388.png" width="60" height="60" alt="Step 4"/>
+        <img src="https://img.icons8.com/arcade/100/studio-display.png" width="60" height="60" alt="Step 4"/>
         <br><b>Render Display</b>
         <br><sub>Pygame window output</sub>
       </td>
       <td align="center" width="20%">
-        <img src="https://cdn-icons-png.flaticon.com/512/727/727269.png" width="60" height="60" alt="Step 5"/>
+        <img src="https://img.icons8.com/bubbles/100/high-volume.png" width="60" height="60" alt="Step 5"/>
         <br><b>Audio Sync</b>
         <br><sub>Synchronized playback</sub>
       </td>
