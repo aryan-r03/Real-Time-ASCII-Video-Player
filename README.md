@@ -105,10 +105,10 @@ This project demonstrates practical skills in **computer vision**, **multimedia 
 ASCIImator/
 │
 ├── app.py                # Main application logic
-├── vid6.mp4             # Sample video file (user-provided)
-├── 1.mp3                # Sample audio file (user-provided)
-├── requirements.txt     # Python dependencies
-└── README.md            # Project documentation
+├── vid.mp4               # Sample video file (user-provided)
+├── audio.mp3             # Sample audio file (user-provided)
+├── requirements.txt      # Python dependencies
+└── README.md             # Project documentation
 ```
 
 ---
@@ -174,8 +174,8 @@ You can control output quality and behavior directly from the configuration sect
 
 ```python
 # Configuration
-VIDEO_PATH = "vid6.mp4"      # Path to your video file
-AUDIO_PATH = "1.mp3"         # Set to None to disable audio
+VIDEO_PATH = "vid.mp4"       # Path to your video file
+AUDIO_PATH = "audio.mp3"     # Set to None to disable audio
 CHAR_WIDTH = 100             # ASCII output width (higher = more detail)
 FONT_SIZE = 10               # Font size for rendering
 ```
@@ -184,8 +184,8 @@ FONT_SIZE = 10               # Font size for rendering
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| `VIDEO_PATH` | str | "vid6.mp4" | Input video file path |
-| `AUDIO_PATH` | str | "1.mp3" | Audio file path (None to disable) |
+| `VIDEO_PATH` | str | "vid.mp4" | Input video file path |
+| `AUDIO_PATH` | str | "audio.mp3" | Audio file path (None to disable) |
 | `CHAR_WIDTH` | int | 100 | ASCII output width (detail level) |
 | `FONT_SIZE` | int | 10 | Rendering font size |
 
