@@ -174,10 +174,10 @@ You can control output quality and behavior directly from the configuration sect
 
 ```python
 # Configuration
-VIDEO_PATH = "vid.mp4"       # Path to your video file
-AUDIO_PATH = "audio.mp3"     # Set to None to disable audio
-CHAR_WIDTH = 100             # ASCII output width (higher = more detail)
-FONT_SIZE = 10               # Font size for rendering
+VIDEO_PATH = "vid.mp4"  # Path to your video file
+AUDIO_PATH = "sample/audio.mp3"  # Set to None to disable audio
+CHAR_WIDTH = 100  # ASCII output width (higher = more detail)
+FONT_SIZE = 10  # Font size for rendering
 ```
 
 ### Configuration Options

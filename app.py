@@ -1,6 +1,8 @@
+from argparse import Namespace
+
 import cv2
 import pygame
-import numpy as np
+import argparse
 
 
 def convert_frame_to_ascii(frame, width=100):
@@ -31,7 +33,7 @@ def convert_frame_to_ascii(frame, width=100):
     return ascii_frame
 
 
-def play_video_in_pygame(video_path, audio_path=None, char_width=100, font_size=12):
+def play_video_in_pygame(video_path, audio_path, char_width, font_size):
 
     # audio
     pygame.init()
@@ -50,7 +52,7 @@ def play_video_in_pygame(video_path, audio_path=None, char_width=100, font_size=
     window_width = char_width * (font_size // 4 + 4)
     window_height = char_height * font_size
     screen = pygame.display.set_mode((window_width, window_height))
-    pygame.display.set_caption("Rehaman Dakait")
+    pygame.display.set_caption("Real time ASCII Video Player")
 
 
     try:
@@ -120,17 +122,38 @@ def play_video_in_pygame(video_path, audio_path=None, char_width=100, font_size=
         print(f"Played {frame_count} frames")
 
 
+def load_arguments_from_cli() -> Namespace | None :
+    """
+    Returns expected arguments
+
+    :return:
+    """
+    DEFAULT_CHAR_WIDTH = 100
+    DEFAULT_VIDEO_PATH = "sample/video.mp4"
+    DEFAULT_AUDIO_PATH = None
+    DEFAULT_FONT_SIZE = 10
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-v", type=str, default=DEFAULT_VIDEO_PATH , help="Video path")
+    parser.add_argument("-a", type=str, default=DEFAULT_AUDIO_PATH , help="Audio path")
+    parser.add_argument("--char-width", type=str, default=DEFAULT_CHAR_WIDTH, help="Char width")
+    parser.add_argument("--font-size", type=str, default=DEFAULT_FONT_SIZE, help="Font size")
+
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
-    VIDEO_PATH = "video.mp4" # insert video path
-    AUDIO_PATH = "audio.mp3" # insert audio path
-    CHAR_WIDTH = 100
-    FONT_SIZE = 10
+    args = load_arguments_from_cli()
+    video_path = args.v
+    audio_path = args.a
+    char_width = args.char_width
+    font_size = args.font_size
 
 
-    print(f"Loading video: {VIDEO_PATH}")
-    if AUDIO_PATH:
-        print(f"Loading separate audio: {AUDIO_PATH}")
+    print(f"Loading video: {video_path}")
+    if audio_path:
+        print(f"Loading separate audio: {audio_path}")
     else:
         print("No audio will be played")
 
-    play_video_in_pygame(VIDEO_PATH, AUDIO_PATH, CHAR_WIDTH, FONT_SIZE)
+    play_video_in_pygame(video_path, audio_path, char_width, font_size)
