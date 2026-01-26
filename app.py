@@ -134,10 +134,10 @@ def load_arguments_from_cli() -> Namespace | None :
     DEFAULT_FONT_SIZE = 10
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("-v", type=str, default=DEFAULT_VIDEO_PATH , help="Video path")
-    parser.add_argument("-a", type=str, default=DEFAULT_AUDIO_PATH , help="Audio path")
-    parser.add_argument("--char-width", type=str, default=DEFAULT_CHAR_WIDTH, help="Char width")
-    parser.add_argument("--font-size", type=str, default=DEFAULT_FONT_SIZE, help="Font size")
+    parser.add_argument("-v", type=str, default=DEFAULT_VIDEO_PATH , help="Input video file path")
+    parser.add_argument("-a", type=str, default=DEFAULT_AUDIO_PATH , help="Audio file path (do not use it for no audio)")
+    parser.add_argument("--char-width", type=str, default=DEFAULT_CHAR_WIDTH, help="ASCII output width (detail level)")
+    parser.add_argument("--font-size", type=str, default=DEFAULT_FONT_SIZE, help="Rendering font size")
 
     return parser.parse_args()
 

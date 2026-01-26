@@ -154,14 +154,21 @@ numpy>=1.19.0
 
 ## 🎮 Running the Application
 
-### Basic Usage
+### 🎮 Command-Line Interface (CLI) Usage
+
+The program now supports running directly from the command line with configurable options. Use the following arguments to customize the playback:
 
 ```bash
-python app.py
-```
+   python app.py -v sample/video.mp4 -a sample/audio.mp3
+  ```
+---
+
+### Example Commands:
+
+#### Basic Usage
 
 The application will:
-1. Load the specified video file
+1. Load the specified video file _(you may choose to insert the video and audio paths as args)_
 2. Initialize the Pygame window
 3. Start real-time ASCII conversion
 4. Play synchronized audio (if enabled)
@@ -170,26 +177,24 @@ The application will:
 
 ## 🎨 Customization
 
-You can control output quality and behavior directly from the configuration section in `app.py`:
+You may control output quality and behavior directly from the CLI:
 
-```python
-# Configuration
-VIDEO_PATH = "vid.mp4"  # Path to your video file
-AUDIO_PATH = "sample/audio.mp3"  # Set to None to disable audio
-CHAR_WIDTH = 100  # ASCII output width (higher = more detail)
-FONT_SIZE = 10  # Font size for rendering
-```
+#### Arguments:
+
+* `-v` (required): Path to the video file.
+* `-a` (optional): Path to the audio file. If not provided, the video will play without audio.
+* `--char-width` (optional): Width of the ASCII characters grid. Default is `100`.
+* `--font-size` (optional): Font size for rendering ASCII characters. Default is `10`.
+
+```bash
+   python app.py -v sample/video.mp4 -a sample/audio.mp3
+ ```
 
 ### Configuration Options
+```bash
+   python app.py -help
+```
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `VIDEO_PATH` | str | "vid.mp4" | Input video file path |
-| `AUDIO_PATH` | str | "audio.mp3" | Audio file path (None to disable) |
-| `CHAR_WIDTH` | int | 100 | ASCII output width (detail level) |
-| `FONT_SIZE` | int | 10 | Rendering font size |
-
----
 
 ## 🧠 How It Works
 
@@ -248,29 +253,18 @@ ASCII_CHARS = " .:-=+*#%@"
 
 ### Example 1: Play with Audio
 
-```python
-VIDEO_PATH = "my_video.mp4"
-AUDIO_PATH = "my_audio.mp3"
-CHAR_WIDTH = 120
-FONT_SIZE = 8
+```bash
+python app.py -v my_video.mp4 -a my_audio.mp3 --char-width 120 --font-size 8
 ```
 
 ### Example 2: Silent Mode (No Audio)
-
-```python
-VIDEO_PATH = "demo.avi"
-AUDIO_PATH = None  # Disable audio
-CHAR_WIDTH = 150
-FONT_SIZE = 6
+```bash
+python app.py -v demo.avi --char-width 150 --font-size 6
 ```
 
 ### Example 3: High Detail Mode
-
-```python
-VIDEO_PATH = "hd_video.mp4"
-AUDIO_PATH = "soundtrack.mp3"
-CHAR_WIDTH = 200   # More characters = more detail
-FONT_SIZE = 5      # Smaller font = higher resolution
+```bash
+python app.py -v hd_video.mp4 -a soundtrack.mp3 --char-width 200 --font-size 5
 ```
 
 ---
@@ -294,11 +288,13 @@ This project demonstrates:
 - ✅ Structuring Python projects for GitHub
 - ✅ Performance optimization for real-time applications
 - ✅ Integration of multiple Python libraries
+- ✅ Dynamic argument parsing
 
 ---
 
 ## 🔮 Future Improvements
 
+- [X] **Runnable from CLI**
 - [ ] **Frame-rate adaptive rendering** for smoother playback
 - [ ] **Terminal-based (CLI) ASCII output** for cross-platform compatibility
 - [ ] **Color ASCII mode** using ANSI color codes
